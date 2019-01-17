@@ -32,6 +32,7 @@ class App extends Component {
           text: comment
         }
       },
+
       update: (proxy, { data: { addComment } }) => {
         const data = proxy.readQuery({ query: GET_COMMENTS });
         data.comments.push(addComment);
@@ -55,7 +56,9 @@ class App extends Component {
                     onChange={this.changeText}
                   />{" "}
                   <button
-                    onClick={() => this.addComment(mutate, this.state.text)}
+                    onClick={() => {
+                      this.addComment(mutate, this.state.text)
+                    }}
                   >
                     Add Me
                   </button>

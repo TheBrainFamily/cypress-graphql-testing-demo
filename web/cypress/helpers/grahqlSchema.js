@@ -1,19 +1,20 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import merge from "lodash/merge";
 import { makeExecutableSchema, addMockFunctionsToSchema } from "graphql-tools";
-import importedSchema from "../../../schema.graphql";
+import importedSchema from "../../../server/schema";
+
 
 const mocks = {
-  TodoItem: () => ({
-    text: "my text",
-    checked: false
-  }),
-  List: () => ({
-    name: "my list"
-  }),
-  User: () => ({
-    email: "lukaszgandecki@thebrain.pro"
-  })
+  // TodoItem: () => ({
+  //   text: "my text",
+  //   checked: false
+  // }),
+  // List: () => ({
+  //   name: "my list"
+  // }),
+  // User: () => ({
+  //   email: "lukaszgandecki@thebrain.pro"
+  // })
 };
 
 export default customResolvers => {
