@@ -33,7 +33,7 @@ describe("Adding comments without server", () => {
 
     cy.getByText("Respects the return from the Server!");
   });
-  it("Uses optimistic UI to show the new todo name before mutation returns", function() {
+  it("Uses optimistic UI to show the new comment name before mutation returns", function() {
     cy.visit("/", mockGraphqlWithResolvers(slowDownMutations(["addComment"])));
 
     addComment("New");

@@ -57,7 +57,7 @@ class App extends Component {
                   />{" "}
                   <button
                     onClick={() => {
-                      this.addComment(mutate, this.state.text)
+                      this.addComment(mutate, this.state.text);
                     }}
                   >
                     Add Me

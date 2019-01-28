@@ -15,4 +15,6 @@ const resolvers = {
 };
 
 const server = new GraphQLServer({ typeDefs, resolvers });
-server.start({endpoint: "/graphql"}, () => console.log("Server is running on http://localhost:4000"));
+server.start({ endpoint: "/graphql" }, () =>
+  console.log("Server is running on http://localhost:4000")
+);
